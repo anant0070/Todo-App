@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ToDo from "./components/ToDo";
 import { addToDo, getAllToDo, updateToDo, deleteToDo } from "./utils/HandleApi";
+import Particle from './components/Particle'
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
 
   useEffect(() => {
     getAllToDo(setToDo)
-  },[toDo])
+  },[])
 
   const updateMode = (_id, text) => {
     setIsUpdating(true)
@@ -24,7 +25,7 @@ function App() {
     <div className="App">
 
       <div className="container">
-
+      <Particle/>
         <h1>ToDo App</h1>
 
         <div className="top">
